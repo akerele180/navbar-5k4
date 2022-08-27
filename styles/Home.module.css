@@ -1,0 +1,239 @@
+.name {
+  font-size: 50px;
+  width: 40%;
+  color: #ffffff;
+}
+.main {
+  height: 80vh;
+  background: linear-gradient(
+      90deg,
+      rgba(163, 116, 107, 1) 0%,
+      rgba(163, 116, 107, 0) 100%
+    ),
+    url("https://images.pexels.com/photos/6647893/pexels-photo-6647893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+      no-repeat right center;
+  background-size: cover;
+  padding: 0 6rem;
+  display: flex;
+  place-items: center;
+}
+.navStyle {
+  height: 90px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  position: relative;
+}
+
+
+.liStyle {
+  display: flex;
+  list-style-type: none;
+}
+.li,
+.liup,
+.liin {
+  padding: 5px 15px;
+  margin: 0 3px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+}
+.liup {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+}
+.liin {
+  border: 1px solid #000;
+}
+.inputField {
+  background: #f4f4f4;
+}
+
+@media screen and (max-width: 1000px) {
+  .name {
+    font-size: 45px;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .name {
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .name {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+  }
+  .main {
+    padding: 0 3rem;
+  }
+  .navStyle {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 931px) {
+  .active {
+    display: none;
+  }
+}
+
+.navbar {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.navbarLogo {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  /* grid-gap: 10px; */
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  /* margin-right: 2rem; */
+  margin: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.navLinks {
+  color: #0066f5;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 3px solid transparent;
+}
+.style {
+  border: 3px solid #0066f5;
+}
+
+.fa-bars {
+  color: #0066f5;
+}
+
+.navLinksMobile {
+  display: none;
+}
+
+.menuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+  .styleLogIn {
+    display: none;
+  }
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    justify-content: flex-start;
+    top: 150px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.05s ease;
+  }
+
+  .navMenu.active {
+    margin-top: 11px;
+    padding: 0;
+    background: rgb(255, 203, 222);
+    background: linear-gradient(
+      20deg,
+      rgba(255, 203, 222, 1) 0%,
+      rgba(217, 231, 253, 1) 72%
+    );
+
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
+
+  .navLinks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navLinks:hover {
+    border-radius: 0;
+  }
+
+  .navbarLogo {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: translate(10%, 50%);
+  }
+  .navbarLogoImg {
+    width: 80%;
+  }
+
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #1888ff;
+    font-size: 2rem;
+  }
+
+  .navLinksMobile {
+    display: block;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .navLinksMobile:hover {
+    background: #fff;
+    border-bottom: 3px solid #0066f5;
+    transition: 250ms;
+  }
+}
